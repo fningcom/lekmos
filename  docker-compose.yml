@@ -1,0 +1,10 @@
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-dbase
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: php script.php
